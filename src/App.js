@@ -1,17 +1,20 @@
 import React from "react";
 import Banner from "./Banner";
+import Cards from "./Cards";
 import "./styles.css";
 
-const characters = [
+const products = [
   {
     id: 1,
     productName: "Wonder Woman",
+    image: "https://source.unsplash.com/weekly?water",
     price: 678,
     discountPrice: 345
   },
   {
     id: 2,
     productName: "Poison Ivy",
+    image: "https://source.unsplash.com/weekly?water",
     price: 345,
     discountPrice: 67
   },
@@ -19,6 +22,7 @@ const characters = [
     id: 3,
     productName: "Black Canary",
     price: 45,
+    image: "https://source.unsplash.com/weekly?water",
     discountPrice: 67
   },
   {
@@ -29,28 +33,18 @@ const characters = [
   }
 ];
 
-const CardListItem = (props) => {
-  return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-3">
-          <div className="card p-2">
-            <img src={props.character.image} alt="product-image" />
-            <strong>{props.character.productName}</strong>
-            <p className="display-3">{props.character.price}</p>
-            <p>{props.character.discountPrice}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const CardList = (props) => {
   return (
-    <div className="">
-      {characters.map((character) => {
-        return <CardListItem character={character} key={character.id} />;
+    <div>
+      {products.map((product) => {
+        return (
+          <Cards
+            image={product.image}
+            productName={product.productName}
+            price={product.price}
+            key={product.id}
+          />
+        );
       })}
     </div>
   );

@@ -12,20 +12,14 @@ const Banner = () => {
     <div>
       <h2> Single Item</h2>
       <Slider {...settings}>
-        <div>
-          <img src="" alt="" />
+        <div className="w-100">
+          <img src="https://source.unsplash.com/weekly?water" alt="" />
         </div>
-        <div>
-          <img src="" alt="" />
+        <div className="w-100">
+          <img src="https://source.unsplash.com/weekly?water" alt="" />
         </div>
-        <div>
-          <img src="" alt="" />
-        </div>
-        <div>
-          <img src="" alt="" />
-        </div>
-        <div>
-          <img src="" alt="" />
+        <div className="w-100">
+          <img src="https://source.unsplash.com/weekly?water" alt="" />
         </div>
       </Slider>
     </div>
